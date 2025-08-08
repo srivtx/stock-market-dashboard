@@ -1,0 +1,62 @@
+[
+  {
+    "name": "Apple Inc.",
+    "symbol": "AAPL",
+    "sector": "Technology"
+  },
+  {
+    "name": "Microsoft Corporation",
+    "symbol": "MSFT",
+    "sector": "Technology"
+  },
+  {
+    "name": "Alphabet Inc.",
+    "symbol": "GOOGL",
+    "sector": "Technology"
+  },
+  {
+    "name": "Amazon.com, Inc.",
+    "symbol": "AMZN",
+    "sector": "E-commerce"
+  },
+  {
+    "name": "Tesla, Inc.",
+    "symbol": "TSLA",
+    "sector": "Automotive"
+  },
+  {
+    "name": "Meta Platforms, Inc.",
+    "symbol": "META",
+    "sector": "Social Media"
+  },
+  {
+    "name": "NVIDIA Corporation",
+    "symbol": "NVDA",
+    "sector": "Technology"
+  },
+  {
+    "name": "Berkshire Hathaway Inc.",
+    "symbol": "BRK-B",
+    "sector": "Conglomerate"
+  },
+  {
+    "name": "Johnson & Johnson",
+    "symbol": "JNJ",
+    "sector": "Healthcare"
+  },
+  {
+    "name": "Visa Inc.",
+    "symbol": "V",
+    "sector": "Financial Services"
+  },
+  {
+    "name": "JPMorgan Chase & Co.",
+    "symbol": "JPM",
+    "sector": "Banking"
+  },
+  {
+    "name": "Procter & Gamble Co.",
+    "symbol": "PG",
+    "sector": "Consumer Goods"
+  }
+]

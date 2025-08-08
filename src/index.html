@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Market Dashboard</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Stock Market Dashboard</h1>
+            <div class="prediction-indicator">
+                <span id="prediction-text">Select a stock to see AI prediction</span>
+            </div>
+        </header>
+        
+        <main class="main-content">
+            <aside class="sidebar">
+                <h2>Companies</h2>
+                <div class="search-box">
+                    <input type="text" id="search-input" placeholder="Search companies...">
+                </div>
+                <ul id="company-list" class="company-list">
+                    <!-- Companies will be loaded here -->
+                </ul>
+            </aside>
+            
+            <section class="chart-section">
+                <div class="chart-header">
+                    <h2 id="selected-company">Select a Company</h2>
+                    <div class="stock-info">
+                        <span id="current-price">--</span>
+                        <span id="price-change" class="price-change">--</span>
+                        <span id="ai-prediction" class="ai-prediction">AI Prediction: --</span>
+                    </div>
+                </div>
+                
+                <div class="chart-container">
+                    <canvas id="chart-area"></canvas>
+                </div>
+                
+                <div class="stock-details">
+                    <div class="detail-item">
+                        <label>52W High:</label>
+                        <span id="week-high">--</span>
+                    </div>
+                    <div class="detail-item">
+                        <label>52W Low:</label>
+                        <span id="week-low">--</span>
+                    </div>
+                    <div class="detail-item">
+                        <label>Volume:</label>
+                        <span id="volume">--</span>
+                    </div>
+                    <div class="detail-item">
+                        <label>Market Cap:</label>
+                        <span id="market-cap">--</span>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    
+    <script src="js/utils.js"></script>
+    <script src="js/stockData.js"></script>
+    <script src="js/chart.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

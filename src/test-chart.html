@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chart.js Test</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        .chart-container { width: 800px; height: 400px; margin: 20px auto; }
+        button { padding: 10px 20px; font-size: 16px; margin: 10px; }
+        #status { padding: 10px; background: #f0f0f0; margin: 10px 0; }
+    </style>
+</head>
+<body>
+    <h1>Chart.js Test Page</h1>
+    <div id="status">Loading...</div>
+    <button onclick="createTestChart()">Create Test Chart</button>
+    
+    <div class="chart-container">
+        <canvas id="testChart"></canvas>
+    </div>
+
+    <script>
+        // Check if Chart.js loaded
+        document.addEventListener('DOMContentLoaded', () => {
+            const statusDiv = document.getElementById('status');
+            if (typeof Chart === 'undefined') {
+                statusDiv.innerHTML = '❌ Chart.js is NOT loaded!';
+                statusDiv.style.background = '#ffebee';
+                statusDiv.style.color = '#c62828';
+            } else {
+                statusDiv.innerHTML = `✅ Chart.js loaded successfully! Version: ${Chart.version}`;
+                statusDiv.style.background = '#e8f5e8';
+                statusDiv.style.color = '#2e7d32';
+                
+                // Auto-create a test chart
+                createTestChart();
+            }
+        });
+
+        function createTestChart() {
+            const ctx = document.getElementById('testChart').getContext('2d');
+            
+            // Sample data for Apple stock
+            const dates = ['Aug 1', 'Aug 2', 'Aug 3', 'Aug 4', 'Aug 5', 'Aug 6', 'Aug 7', 'Aug 8'];
+            const prices = [175.50, 177.20, 174.80, 176.90, 179.30, 178.10, 180.50, 182.20];
+            
+            new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: dates,
+                    datasets: [{
+                        label: 'Apple Stock Price',
+                        data: prices,
+                        borderColor: '#667eea',
+                        backgroundColor: 'rgba(102, 126, 234, 0.1)',
+                        borderWidth: 2,
+                        fill: true,
+                        tension: 0.1,
+                        pointBackgroundColor: '#667eea',
+                        pointBorderColor: '#ffffff',
+                        pointBorderWidth: 2,
+                        pointRadius: 4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        title: {
+                            display: true,
+                            text: 'Test Chart - Apple Stock Prices'
+                        },
+                        legend: {
+                            display: true
+                        }
+                    },
+                    scales: {
+                        y: {
+                            title: {
+                                display: true,
+                                text: 'Price (USD)'
+                            },
+                            ticks: {
+                                callback: function(value) {
+                                    return '$' + value.toFixed(2);
+                                }
+                            }
+                        },
+                        x: {
+                            title: {
+                                display: true,
+                                text: 'Date'
+                            }
+                        }
+                    }
+                }
+            });
+            
+            console.log('Test chart created successfully!');
+        }
+    </script>
+</body>
+</html>

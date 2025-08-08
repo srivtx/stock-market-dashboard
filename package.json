@@ -1,0 +1,44 @@
+{
+  "name": "stock-market-dashboard",
+  "version": "1.0.0",
+  "description": "A responsive web application for viewing stock market data with AI-powered price predictions.",
+  "main": "src/index.html",
+  "scripts": {
+    "start": "live-server src --port=8080 --open=/",
+    "dev": "live-server src --port=3000",
+    "build": "echo 'No build process required for static files'",
+    "test": "echo 'No tests specified'",
+    "deploy": "echo 'Deploy to your preferred hosting platform'",
+    "start:prod": "cd backend && npm start",
+    "install:backend": "cd backend && npm install",
+    "postinstall": "npm run install:backend"
+  },
+  "keywords": [
+    "stock", 
+    "market", 
+    "dashboard", 
+    "finance", 
+    "ai-prediction", 
+    "chart.js", 
+    "responsive-design",
+    "javascript",
+    "fintech"
+  ],
+  "author": "Your Name",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "live-server": "^1.2.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/stock-market-dashboard.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/stock-market-dashboard/issues"
+  },
+  "homepage": "https://github.com/yourusername/stock-market-dashboard#readme",
+  "engines": {
+    "node": ">=12.0.0"
+  }
+}
